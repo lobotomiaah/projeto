@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+        }
+
+        /* HEADER */
+        header {
+            background: #ffffff;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #e8e8e8;
+        }
+
+        header h2 {
+            margin: 0;
+        }
+
+        header nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            color: #007bff;
+        }
+
+        /* BOTÃO VOLTAR */
+        .voltar {
+            display: inline-block;
+            margin: 15px;
+            padding: 10px 18px;
+            background: #333;
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .voltar:hover {
+            background: #555;
+        }
+
+        /* CAIXA SUPERIOR */
+        .topo {
+            padding: 25px;
+            background: linear-gradient(135deg, #0066ff, #4d9fff);
+            color: white;
+        }
+
+        .topo h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .top-info {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 12px;
+            width: 150px;
+            backdrop-filter: blur(5px);
+        }
+
+        .info-card h3 {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .info-card p {
+            font-size: 20px;
+            margin: 8px 0 0;
+        }
+
+        /* TABS */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin: 15px 0;
+        }
+
+        .tab {
+            padding: 10px 25px;
+            border-radius: 10px;
+            background: #e8e8e8;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .tab.ativa {
+            background: #0066ff;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* PODIUM */
+        .podium {
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        .pos {
+            text-align: center;
+            margin: 0 20px;
+            width: 120px;
+        }
+
+        .pos-circle {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            margin: 0 auto;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .p1 { background: gold; }
+        .p2 { background: #cbd7ff; }
+        .p3 { background: #ffb894; }
+
+        .pos-name {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .pos-points {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* LISTA */
+        .lista {
+            margin: 20px;
+        }
+
+        .item {
+            background: #fff;
+            padding: 18px;
+            border-radius: 12px;
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .item .num {
+            background: #ffe8b6;
+            padding: 6px 12px;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        .item-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pts {
+            font-weight: bold;
+            font-size: 18px;
+            color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h2>TABLEcode</h2>
+        <nav>
+            <a href="projeto.html">Home</a>
+            <a href="ranking.html">Ranking</a>
+            <a href="config.html">Configurações</a>
+        </nav>
+    </header>
+
+    <!-- BOTÃO VOLTAR -->
+    <a href="projeto.html" class="voltar">⬅ Voltar</a>
+
+    <!-- TOPO DO RANKING -->
+    <div class="topo">
+        <h1>Ranking</h1>
+        <p>Atividades de Alunos</p>
+
+        <div class="top-info">
+            <div class="info-card">
+                <h3>Pontos</h3>
+                <p>1250</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Posição</h3>
+                <p>#4</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- TABS -->
+    <div class="tabs">
+        <div class="tab ativa">Semana</div>
+        <div class="tab">Mês</div>
+        <div class="tab">Geral</div>
+    </div>
+
+    <!-- PÓDIUM -->
+    <div class="podium">
+        <div class="pos">
+            <div class="pos-circle p2">2</div>
+            <div class="pos-name">João Santos</div>
+            <div class="pos-points">1720</div>
+        </div>
+
+        <div class="pos">
+            <div class="pos-circle p1">👑</div>
+            <div class="pos-name">Marina Silva</div>
+            <div class="pos-points">1850</div>
+        </div>
+
+        <div class="pos">
+            <div class="pos-circle p3">4</div>
+            <div class="pos-name">Você</div>
+            <div class="pos-points">1250</div>
+        </div>
+    </div>
+
+    <!-- LISTA -->
+    <div class="lista">
+        <div class="item">
+            <span class="num">5</span>
+            <div class="item-info">
+                <strong>Ana Costa</strong>
+                <small>8 atividades</small>
+            </div>
+            <span class="pts">1180 pts</span>
+        </div>
+
+        <div class="item">
+            <span class="num">6</span>
+            <div class="item-info">
+                <strong>Pedro Oliveira</strong>
+                <small>7 atividades</small>
+            </div>
+            <span class="pts">1050 pts</span>
+        </div>
+
+        <div class="item">
+            <span class="num">7</span>
+            <div class="item-info">
+                <strong>Carla Mendes</strong>
+                <small>6 atividades</small>
+            </div>
+            <span class="pts">950 pts</span>
+        </div>
+
+        <div class="item">
+            <span class="num">8</span>
+            <div class="item-info">
+                <strong>Lucas Alves</strong>
+                <small>6 atividades</small>
+            </div>
+            <span class="pts">890 pts</span>
+        </div>
+    </div>
+
+</body>
+</html>
